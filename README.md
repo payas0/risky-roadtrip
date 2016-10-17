@@ -33,9 +33,9 @@ E.g. using this command on a Mac:
 export GOOGLE_MAPS_API_KEY=YOUR_KEY_HERE
 ```
 
-### Running tests
+## Testing
 ```
-export GOOGLE_MAPS_API_KEY=YOUR_KEY_HERE
+npm run test
 ```
 
 ##Assumptions

@@ -28,10 +28,7 @@ describe('SimpleDistanceProvider', function () {
     var result = SimpleDistanceProvider.getDistanceBetween({latitude: 0, longitude: 0}, {latitude: 0, longitude: 180})
 
     result.then((data) => {
-      console.log("Length = ", data);
-
       var diff = Math.abs(TELLUS_CIRCUMFERENCE_METERS / 2 - data)
-
       expect(diff).to.be.lessThan(500) //500m acceptable inaccuracy on half the globe
       done();
     })
@@ -66,7 +63,6 @@ describe('GoogleMapsDistanceProvider', function () {
     let result = GoogleMapsDistanceProvider
       .getDistanceBetween({latitude: 0, longitude: 0}, {latitude: 0, longitude: 180});
 
-    //assertions
     result.then((data) => {
       expect(data).to.be.equal(EXPECTED_VALUE)
       done()
@@ -100,9 +96,6 @@ describe('GoogleMapsDistanceProvider', function () {
       longitude: 180
     })
 
-    //call the function we're testing
-
-    //assertions
     result.then((data) => {
       assert.fail()
       done()
