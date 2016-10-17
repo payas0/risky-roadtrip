@@ -1,0 +1,22 @@
+{
+  "name": "risky",
+  "version": "1.0.0",
+  "description": "Risky Roadtrip Analyzer processes waypoints from a trip and outputs categorized data used to determine insurance policy.",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "mocha ./spec/*.spec.js",
+    "coverage": "./node_modules/.bin/istanbul cover --report html _mocha ./spec/*.spec.js",
+    "lint":"eslint lib/**;exit 0;"
+  },
+  "author": "Ola Dahlqvist",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "istanbul": "0.4.5",
+    "sinon": "1.17.6"
+  },
+  "dependencies": {
+    "@google/maps": "0.2.1"
+  }
+}
